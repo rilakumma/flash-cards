@@ -1,7 +1,38 @@
+.card-holder {
+  perspective: 700;
+}
 .card-container {
+  position: relative;
   height: 200px;
   width: 400px;
   border: 1px solid grey;
+  margin: 0px 0px;
+  transition: all 0.6s ease;
+  transform-style: preserve-3d;
+  &:hover {
+    cursor: pointer;
+  }
+}
+.card-container.clicked {
+  transform: rotateX(180deg);
+}
+.front,
+.back {
+  background: white;
+  box-shadow: 0.4px 0.5px 20px 3px rgba(0, 0, 0, 0.767);
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 200px;
+  width: 400px;
+  backface-visibility: hidden;
+  font-size: 30px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.back {
+  transform: rotateX(180deg);
 }
 .question {
   font-size: 25px;

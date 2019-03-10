@@ -1,0 +1,18 @@
+.nav {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  height: 50px;
+  width: 100%;
+  background: lightblue;
+  ul {
+    width: 30%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    text-decoration: none;
+    li {
+      list-style-type: none;
+    }
+  }
+}

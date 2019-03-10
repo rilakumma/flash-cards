@@ -1,14 +1,14 @@
 import React, { Component } from "react";
 import "./App.css";
-import NewCard from "./components/NewCard/NewCard";
-import ShowCards from "./components/ShowCards/ShowCards";
+import Nav from "./components/Nav/Nav";
+import routes from "./routes";
 
 class App extends Component {
   render() {
     return (
       <div className="App">
-        <NewCard />
-        <ShowCards />
+        <Nav />
+        {routes}
       </div>
     );
   }
