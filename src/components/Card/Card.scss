@@ -3,8 +3,8 @@
 }
 .card-container {
   position: relative;
-  height: 200px;
-  width: 400px;
+  height: 300px;
+  width: 600px;
   border: 1px solid grey;
   margin: 0px 0px;
   transition: all 0.6s ease;
@@ -14,7 +14,7 @@
   }
 }
 .card-container.clicked {
-  transform: rotateX(180deg);
+  transform: rotateY(180deg);
 }
 .front,
 .back {
@@ -23,8 +23,8 @@
   position: absolute;
   top: 0;
   left: 0;
-  height: 200px;
-  width: 400px;
+  height: 300px;
+  width: 600px;
   backface-visibility: hidden;
   font-size: 30px;
   display: flex;
@@ -32,10 +32,5 @@
   align-items: center;
 }
 .back {
-  transform: rotateX(180deg);
-}
-.question {
-  font-size: 25px;
-}
-.answer {
+  transform: rotateY(180deg);
 }

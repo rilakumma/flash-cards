@@ -11,6 +11,12 @@
   height: 33px;
   font-size: 23px;
   margin: 10px 0px;
+  border: none;
+  border-bottom: 3px black solid;
+  outline: none;
+  &:focus {
+    border-bottom: 3px #fccdcd solid;
+  }
 }
 .submit-btn {
   height: fit-content;
@@ -21,4 +27,7 @@
   padding: 10px;
   border: none;
   margin: 10px 0px;
+  &:hover {
+    cursor: pointer;
+  }
 }

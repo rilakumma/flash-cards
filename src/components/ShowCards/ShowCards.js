@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import Card from "../Card/Card";
 import axios from "axios";
 import "./ShowCard.scss";
+import loading from "./blueloading.gif";
 
 export default class ShowCards extends Component {
   constructor() {
@@ -21,19 +22,22 @@ export default class ShowCards extends Component {
   }
   render() {
     return this.state.cards !== null ? (
-      <div className="card-grid">
+      <div className="card-stack">
         <Card cards={this.state.cards[this.state.index]} clicked={this.state.clicked} />
-        <button
-          onClick={() =>
-            this.state.index < this.state.cards.length - 1 ? this.setState({ index: this.state.index + 1 }) : this.setState({ index: 0 })
-          }
-          className="next"
-        >
-          Next
-        </button>
+        {this.state.index < this.state.cards.length - 1 ? (
+          <button onClick={() => this.setState({ index: this.state.index + 1 })} className="next">
+            Next
+          </button>
+        ) : (
+          <button onClick={() => this.setState({ index: 0 })} className="next">
+            Start Over
+          </button>
+        )}
       </div>
     ) : (
-      <div>Loading Cards...</div>
+      <div className="card-stack">
+        <img src={loading} width={100} alt="loading gif" />
+      </div>
     );
   }
 }
