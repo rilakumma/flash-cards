@@ -1,3 +1,4 @@
+@import "../../sass/main.scss";
 .new-card {
   height: 400px;
   width: 100%;
@@ -5,29 +6,13 @@
   justify-content: center;
   align-items: center;
   flex-direction: column;
+  div {
+    width: 75%;
+  }
 }
 .inputs {
-  width: 80%;
-  height: 33px;
-  font-size: 23px;
-  margin: 10px 0px;
-  border: none;
-  border-bottom: 3px black solid;
-  outline: none;
-  &:focus {
-    border-bottom: 3px #fccdcd solid;
-  }
+  @include inputs;
 }
 .submit-btn {
-  height: fit-content;
-  width: fit-content;
-  border-radius: 5px;
-  background: lightblue;
-  font-size: 20px;
-  padding: 10px;
-  border: none;
-  margin: 10px 0px;
-  &:hover {
-    cursor: pointer;
-  }
+  @include buttons;
 }

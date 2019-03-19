@@ -1,6 +1,7 @@
 import React, { Component } from "react";
+import withContext from "../../context/Context_HOC";
 
-export default class Home extends Component {
+class Home extends Component {
   render() {
     return (
       <div>
@@ -10,3 +11,4 @@ export default class Home extends Component {
     );
   }
 }
+export default withContext(Home);

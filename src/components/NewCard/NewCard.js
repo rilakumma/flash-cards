@@ -27,27 +27,29 @@ export default class NewCard extends Component {
   render() {
     return (
       <div className="new-card">
-        <h1>Add New Flash Card</h1>
-        <input
-          onChange={e => this.setState({ question: e.target.value })}
-          className="inputs"
-          placeholder="Enter question"
-          value={this.state.question}
-        />
-        <input
-          onChange={e => this.setState({ answer: e.target.value })}
-          className="inputs"
-          placeholder="Enter answer"
-          value={this.state.answer}
-        />
-        <button onClick={() => this.submitCard()} className="submit-btn">
-          Create Flash Card
-        </button>
-        {this.state.status === true && (
-          <div>
-            Success: <Link to="view">View all Flash Cards</Link>
-          </div>
-        )}
+        <div>
+          <h1>Add New Flash Card</h1>
+          <input
+            onChange={e => this.setState({ question: e.target.value })}
+            className="inputs"
+            placeholder="Enter question"
+            value={this.state.question}
+          />
+          <input
+            onChange={e => this.setState({ answer: e.target.value })}
+            className="inputs"
+            placeholder="Enter answer"
+            value={this.state.answer}
+          />
+          <button onClick={() => this.submitCard()} className="submit-btn">
+            Create Flash Card
+          </button>
+          {this.state.status === true && (
+            <div>
+              Success: <Link to="view">View all Flash Cards</Link>
+            </div>
+          )}
+        </div>
       </div>
     );
   }

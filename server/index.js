@@ -30,3 +30,4 @@ app.get("/cards", cardsController.getAll);
 // user routes
 app.post("/register", userController.newUser);
 app.post("/login", userController.loginUser);
+app.post("/logout", userController.logoutUser);

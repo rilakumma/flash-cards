@@ -3,10 +3,13 @@
 }
 .card-container {
   position: relative;
-  height: 300px;
-  width: 600px;
-  border: 1px solid grey;
+  // height: 300px;
+  // width: 600px;
+  height: 20em;
+  width: 40em;
+  // border: 1px solid grey;
   margin: 0px 0px;
+
   transition: all 0.6s ease;
   transform-style: preserve-3d;
   &:hover {
@@ -19,18 +22,21 @@
 .front,
 .back {
   background: white;
-  box-shadow: 0.4px 0.5px 20px 3px rgba(0, 0, 0, 0.767);
+  box-shadow: 0.4px 0.5px 20px 3px rgba(145, 144, 144, 0.767);
   position: absolute;
   top: 0;
   left: 0;
-  height: 300px;
-  width: 600px;
+
+  height: 20rem;
+  width: 40rem;
   backface-visibility: hidden;
-  font-size: 30px;
+  font-size: 2em;
   display: flex;
   justify-content: center;
   align-items: center;
+  padding: 1rem;
 }
 .back {
   transform: rotateY(180deg);
+  font-size: 1.5rem;
 }

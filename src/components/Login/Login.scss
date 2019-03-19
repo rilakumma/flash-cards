@@ -1,36 +1,68 @@
+@import "../../sass/main.scss";
+
 .login-page {
   height: 100%;
   width: 100%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 5rem;
 }
-.login-header {
-  font-size: 2rem;
-  border-bottom: 1px grey solid;
-  background: lightblue;
-  height: 50px;
-  width: 100%;
-}
+
 .login-form {
-  border: 1px grey solid;
-  height: 350px;
+  // border: 1px grey solid;
+  background: rgb(243, 243, 243);
+  height: fit-content;
   width: 500px;
   display: flex;
-  justify-content: flex-start;
+  justify-content: center;
   align-items: center;
   flex-direction: column;
+
+  .login-header {
+    font-size: 2rem;
+    background: lightblue;
+    height: 4rem;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .form-container {
+    width: 100%;
+    margin: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    div {
+      width: 80%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: flex-start;
+      flex-direction: column;
+    }
+  }
 }
+
 input {
-  width: 80%;
+  width: 100%;
   height: 33px;
   font-size: 23px;
   margin: 10px 0px;
   border: none;
   border-bottom: 3px black solid;
   outline: none;
+  background: rgb(243, 243, 243);
   &:focus {
     border-bottom: 3px #fccdcd solid;
   }
+}
+.login {
+  @include buttons;
+  align-self: center;
+}
+span {
+  color: purple;
+  cursor: pointer;
+  font-weight: 700;
 }

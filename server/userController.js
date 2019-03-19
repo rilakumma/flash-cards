@@ -33,9 +33,13 @@ module.exports = {
 
     const token = user.generateAuthToken();
     res.status(200).json({ message: "Logged in", token: token });
+    req.session.user = token;
   },
   logoutUser: (req, res) => {
     req.session.destroy();
     res.status(200).json("Successfully logged out see ya next time");
+  },
+  getUser: (req, res) => {
+    res.status(200).json(req.session.user);
   }
 };
