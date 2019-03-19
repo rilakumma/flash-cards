@@ -32,7 +32,7 @@ class Nav extends Component {
     return (
       <div>
         <div className="nav">
-          <span>&#9729;</span>
+          <span className="cloud">&#9729;</span>
           <ul>
             <li>
               <Link to="/" className="link">
@@ -41,7 +41,7 @@ class Nav extends Component {
             </li>
             <li>
               <Link to="/new">
-                <span className="link">&#43;</span>
+                <span className="link-add">&#43;</span>
               </Link>
             </li>
             <li>
