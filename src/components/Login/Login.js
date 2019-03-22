@@ -15,7 +15,6 @@ class Login extends Component {
   }
   handleLogin = () => {
     axios.post("/login", { username: this.state.username, password: this.state.password }).then(res => {
-      console.log(res);
       if (res.status === 200) {
         this.props.context.updateUser(res.data);
       }
@@ -23,7 +22,6 @@ class Login extends Component {
   };
   handleRegister = () => {
     axios.post("/register", { username: this.state.username, password: this.state.password }).then(res => {
-      console.log(res);
       if (res.status === 200) {
         this.props.context.updateUser(res.data);
       }
@@ -34,7 +32,6 @@ class Login extends Component {
       <div className="login-page">
         {this.state.register === false ? (
           <div className="login-form">
-            {/* <div className="login-header">Login</div> */}
             <div className="form-container">
               <div>
                 <label>username</label>
@@ -52,15 +49,14 @@ class Login extends Component {
           </div>
         ) : (
           <div className="login-form">
-            {/* <div className="login-header">Register</div> */}
             <div className="form-container">
               <div>
                 <label>username</label>
                 <input onChange={e => this.setState({ username: e.target.value })} placeholder="Type your username" />
                 <label>password</label>
                 <input onChange={e => this.setState({ password: e.target.value })} type="password" placeholder="Type your password" />
-                <label>confirm password</label>
-                <input onChange={e => this.setState({ confirmpass: e.target.value })} type="password" placeholder="Confirm your password" />
+                {/* <label>confirm password</label>
+                <input onChange={e => this.setState({ confirmpass: e.target.value })} type="password" placeholder="Confirm your password" /> */}
 
                 <button onClick={() => this.handleRegister()} className="login">
                   REGISTER

@@ -20,10 +20,11 @@ export default class ShowCards extends Component {
       });
     });
   }
+
   render() {
     return this.state.cards !== null ? (
       <div className="card-stack">
-        <Card cards={this.state.cards[this.state.index]} clicked={this.state.clicked} />
+        <Card cards={this.state.cards[this.state.index]} />
         {this.state.index < this.state.cards.length - 1 ? (
           <button onClick={() => this.setState({ index: this.state.index + 1 })} className="next">
             Next
